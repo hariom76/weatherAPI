@@ -22,7 +22,8 @@ def index(request):
             'cord2':r['coord']['lat'],
             'icon':r['weather'][0]['icon'],
             'temp':r['main']['temp'],
-            'weat':r['weather'][0]['description']
+            'weat':r['weather'][0]['description'],
+            'humid':r['main']['humidity']
         }
         context={'weather':weather}
         return render(request,'index.html',context)
